@@ -1,16 +1,31 @@
 
-header > *:hover  {
-	background: black;
-	color: white;
+header > * {
+ transition: all 0.1s ease-in  ;
 }
 
-div  {
+header > div:hover  {
+	background: white;
+ color: black;
+ border-radius: 0,5em;
+ padding: 1em;
+}
+
+header {
+ animation: header-effects 5s ease-in 0s 2 alternate ;
+}
+
+@keyframes header-effects {
+ 50% {background: gray; color: gray;}
+ 100% {background: black; color: white;}
+}
+
+
+div img {
  transition: all 0.1s ease-in-out ;
 }
-div :hover {
+div img:hover {
  transform: scale(1.1,1.1);
  border-radius: 3em;
- transform: rotate(180deg);
 }
 
 .images > div:hover {
@@ -19,16 +34,17 @@ div :hover {
  justify-content: center;
  align-items: center;
 }
-/* 
-@keyframes show {
- 50%{ width: 90%; height: 90%;}
- 100%{ width: 100% ; height: 100%;}
-} */
 
 
 
-
+nav >  ul > li {
+ transition: 0.2s ease-in;
+ color: black;
+}
 
 nav >  ul > li:hover {
-	background: chartreuse;
+ background: black;
+ color: cyan;
+ font-size: 1.5em;
+ border-radius: 1em;
 }
